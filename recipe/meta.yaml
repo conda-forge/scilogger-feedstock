@@ -1,13 +1,14 @@
 {% set name = "scilogger" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scilogger-{{ version }}.tar.gz
-  sha256: 6df23dfc1f34dc097f75f97e248e0e54e381c9063e0a593ca03ccb832144db5e
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scilogger-{{ version }}.tar.gz
+  sha256: 4ede99bf4ee7b959b81223ce8a835a3c29b16bbafe2f3c2eb1341c1b4fe7858b
 
 build:
   noarch: python
@@ -16,19 +17,20 @@ build:
 
 requirements:
   host:
-    - python >=3.9
-    - setuptools >68.2
-    - wheel >0.41
-    - setuptools-scm >7.1
-    - pip
+    - python {{ python_min }}
+    - setuptools >=68.2
+    - wheel >=0.41
+    - setuptools-scm >=7.1
+    - pip >=24.2
   run:
-    - python >=3.9
+    - python >={{ python_min }}
 
 test:
   imports:
     - scilogger
   requires:
-    - pip
+    - python {{ python_min }}
+    - pip >=24.2
 
 about:
   summary: SciLogger - Python Logging for Science
