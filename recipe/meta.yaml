@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scilogger-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scilogger-{{ version }}.tar.gz
   sha256: 4ede99bf4ee7b959b81223ce8a835a3c29b16bbafe2f3c2eb1341c1b4fe7858b
 
 build:
@@ -29,7 +29,8 @@ test:
   imports:
     - scilogger
   requires:
-    - pip
+    - python {{ python_min }}
+    - pip >=24.2
 
 about:
   summary: SciLogger - Python Logging for Science
