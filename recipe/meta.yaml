@@ -1,5 +1,5 @@
 {% set name = "scilogger" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scilogger-{{ version }}.tar.gz
-  sha256: 4ede99bf4ee7b959b81223ce8a835a3c29b16bbafe2f3c2eb1341c1b4fe7858b
+  sha256: df0c2e532a154e5fa2a8f04de71cd37834a895f16464b52858735f5e2224d4ab
 
 build:
   noarch: python
