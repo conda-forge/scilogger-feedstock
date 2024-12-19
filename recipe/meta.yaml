@@ -1,5 +1,5 @@
 {% set name = "scilogger" %}
-{% set version = "1.2.2" %}
+{% set version = "1.2.3" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scilogger-{{ version }}.tar.gz
-  sha256: df0c2e532a154e5fa2a8f04de71cd37834a895f16464b52858735f5e2224d4ab
+  sha256: 18adeb40bfc1ccf2cba882e8ee405e3a0943f4ae6b35a34602b36edb61ff1f9b
 
 build:
   noarch: python
@@ -18,10 +18,10 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools >=68.2
-    - wheel >=0.41
-    - setuptools-scm >=7.1
-    - pip >=24.2
+    - setuptools >=75.5
+    - wheel >=0.45
+    - setuptools-scm >=8.1
+    - pip >=24.3
   run:
     - python >={{ python_min }}
 
@@ -30,15 +30,15 @@ test:
     - scilogger
   requires:
     - python {{ python_min }}
-    - pip >=24.2
+    - pip >=24.3
 
 about:
-  summary: SciLogger - Python Logging for Science
+  summary: SciLogger - Logging for Scientific Applications
   description: |
-    SciLogger is a Python Logging module. Specially targeted for scientific 
-    applications. Use a global timer to measure the elapsed time. Provide a 
-    class for timing code blocks. Definition of custom indentation levels. 
-    Definition of colors for the logging levels.
+    SciLogger is a extension of the Python Logging module. Specially targeted 
+    for scientific applications. Use a global timer to measure the elapsed 
+    time. Provide a class for timing code blocks. Definition of custom 
+    indentation levels. Definition of colors for the logging levels.
   license: BSD-2-Clause
   license_file: LICENSE.txt
   doc_url: https://github.com/otvam/scilogger
