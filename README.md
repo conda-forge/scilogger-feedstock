@@ -7,16 +7,16 @@ Home: https://github.com/otvam/scilogger
 
 Package license: BSD-2-Clause
 
-Summary: SciLogger - Python Logging for Science
+Summary: SciLogger - Logging for Scientific Applications
 
 Development: https://github.com/otvam/scilogger
 
 Documentation: https://github.com/otvam/scilogger
 
-SciLogger is a Python Logging module. Specially targeted for scientific
-applications. Use a global timer to measure the elapsed time. Provide a
-class for timing code blocks. Definition of custom indentation levels.
-Definition of colors for the logging levels.
+SciLogger is a extension of the Python Logging module. Specially targeted
+for scientific applications. Use a global timer to measure the elapsed
+time. Provide a class for timing code blocks. Definition of custom
+indentation levels. Definition of colors for the logging levels.
 
 
 Current build status
